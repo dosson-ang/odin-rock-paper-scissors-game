@@ -27,8 +27,26 @@ function getComputerChoice() {
   }
 }
 
-const humanChoice = getHumanChoice();
-console.log("Player chose:", humanChoice);
-if (humanChoice !== "Invalid choice") {
-  console.log("Computer chose:", getComputerChoice());
+function playRound(humanChoice, computerChoice) {
+  if (humanChoice === "Invalid choice") {
+    console.log("Invalid choice, round not played.");
+    return;
+  }
+  
+  console.log("Player chose:", humanChoice);
+  console.log("Computer chose:", computerChoice);
+  
+  if (humanChoice === computerChoice) {
+    console.log("It's a draw!");
+  } else if (
+    (humanChoice === "Rock" && computerChoice === "Scissors") ||
+    (humanChoice === "Paper" && computerChoice === "Rock") ||
+    (humanChoice === "Scissors" && computerChoice === "Paper")
+  ) {
+    console.log("You win!", humanChoice, "beats", computerChoice);
+    humanScore++;
+  } else {
+    console.log("You lose!", computerChoice, "beats", humanChoice);
+    computerScore++;
+  }
 }
