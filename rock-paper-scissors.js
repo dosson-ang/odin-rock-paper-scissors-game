@@ -33,7 +33,7 @@ function playRound(humanChoice, computerChoice) {
     return;
   }
   
-  console.log("Player chose:", humanChoice);
+  console.log("You chose:", humanChoice);
   console.log("Computer chose:", computerChoice);
   
   if (humanChoice === computerChoice) {
@@ -49,4 +49,25 @@ function playRound(humanChoice, computerChoice) {
     console.log("You lose!", computerChoice, "beats", humanChoice);
     computerScore++;
   }
+
+  console.log("Your score:", humanScore, "Computer score:", computerScore);
 }
+
+function playGame() {
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  
+  console.log("Final Score - You:", humanScore, "Computer:", computerScore);
+  if (humanScore > computerScore) {
+    console.log("Congratulations! You won the game!");
+  } else if (humanScore < computerScore) {
+    console.log("Better luck next time! Computer wins the game.");
+  } else {
+    console.log("It's a draw!");
+  }
+}
+
+playGame();
