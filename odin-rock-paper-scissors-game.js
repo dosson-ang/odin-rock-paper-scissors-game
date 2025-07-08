@@ -10,6 +10,15 @@ function getComputerChoice() {
   }
 }
 
+function getHumanChoice() {
+  let humanAnswer = prompt("Type in either 'rock', 'paper', or 'scissors':");
+  let humanAnswerInLowerCase = humanAnswer.toLowerCase();
 
-
-console.log(getComputerChoice());
+  if (humanAnswerInLowerCase === "rock") {
+    return "rock";
+  } else if (humanAnswerInLowerCase === "paper") {
+    return "paper";
+  } else if (humanAnswerInLowerCase === "scissors") {
+    return "scissors";
+  }
+}
