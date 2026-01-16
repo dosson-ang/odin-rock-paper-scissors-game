@@ -55,11 +55,6 @@ function playGame() {
     } 
   }
 
-  for (let i = 0; i < 5; i++ ) {
-    playRound(getHumanChoice(), getComputerChoice());
-    console.log(`Player's Score: ${humanScore} Computer's Score: ${computerScore}`);
-  }
-
   if (humanScore > computerScore) {
     console.log(`The final standings are ${humanScore} - ${computerScore}! Congrats! You win the game!`);
   } else if (humanScore < computerScore) {
