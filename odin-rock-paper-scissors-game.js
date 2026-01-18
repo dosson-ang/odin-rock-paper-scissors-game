@@ -55,6 +55,14 @@ function playGame() {
     } 
   }
 
+  const buttons = document.querySelectorAll("button");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      
+    });
+  });
+
   if (humanScore > computerScore) {
     console.log(`The final standings are ${humanScore} - ${computerScore}! Congrats! You win the game!`);
   } else if (humanScore < computerScore) {
