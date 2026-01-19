@@ -40,3 +40,18 @@ function playRound(humanChoice, computerChoice) {
     console.log('Scissors against Scissors is a draw!');
   } 
 }
+
+const rockButton = document.querySelector("#rockButton");
+rockButton.addEventListener("click", () => {
+  playRound('rock', getComputerChoice());
+});
+
+const paperButton = document.querySelector("#paperButton");
+paperButton.addEventListener("click", () => {
+  playRound('paper', getComputerChoice());
+});
+
+const scissorsButton = document.querySelector("#scissorsButton");
+scissorsButton.addEventListener("click", () => {
+  playRound('scissors', getComputerChoice());
+});
